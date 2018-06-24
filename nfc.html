@@ -1,0 +1,183 @@
+<html>
+<head>
+  <title>NFC</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Bruno Wenk">
+  <meta name="date" content="2018-06-12"
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/w3-v4.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans+Condensed:300" rel="stylesheet">
+  <style>
+    body {font-family: 'Josefin Slab', 'Georgia', serif;}
+    h1,h2,h3,h4,h5,h6 {font-family: 'Open Sans Condensed', 'Verdana', sans-serif;}
+    .hint {font-family: 'Open Sans Condensed', 'Verdana', sans-serif;}
+    .title {color: #ecb535; font-weight: bold; margin-top: 2em;}
+    .w3-bar,h1,button {font-family: 'Open Sans Condensed', 'Verdana', sans-serif;}
+    .w3-theme-l5 {color:#000 !important; background-color:#fefbf5 !important}
+    .w3-theme-l4 {color:#000 !important; background-color:#fcf2dc !important}
+    .w3-theme-l3 {color:#000 !important; background-color:#f9e6ba !important}
+    .w3-theme-l2 {color:#000 !important; background-color:#f5d997 !important}
+    .w3-theme-l1 {color:#000 !important; background-color:#f2cd75 !important}
+    .w3-theme-d1 {color:#000 !important; background-color:#ecb535 !important}
+    .w3-theme-d2 {color:#000 !important; background-color:#e9ab18 !important}
+    .w3-theme-d3 {color:#fff !important; background-color:#ce9613 !important}
+    .w3-theme-d4 {color:#fff !important; background-color:#b08010 !important}
+    .w3-theme-d5 {color:#fff !important; background-color:#936b0e !important}
+    .w3-theme-light {color:#000 !important; background-color:#fefbf5 !important}
+    .w3-theme-dark {color:#fff !important; background-color:#936b0e !important}
+    .w3-theme-action {color:#fff !important; background-color:#936b0e !important}
+    .w3-theme {color:#000 !important; background-color:#efc050 !important}
+    .w3-text-theme {color:#efc050 !important}
+    .w3-theme-border {border-color:#efc050 !important}
+    .w3-hover-theme:hover {color:#000 !important; background-color:#efc050 !important}
+    .accordion {color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; transition: 0.4s;}
+    .active, .accordion:hover {background-color: #ecb535;}
+    .panel {padding: 0 18px; display: none; background-color: #ecb535; overflow: hidden;}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-theme-d1 w3-center" style="padding:64px 16px 16px">
+  <h1 class="w3-margin w3-jumbo">NFC - Near Field Communication</h1>
+  <h2 class="w3-margin">Eine Werkstatt</h2>
+</header>
+    
+<!-- Objectives -->
+<div class="w3-container w3-theme-d1 w3-padding-hor-32 w3-theme-l4">
+    <h2 class="accordion w3-text-darkgrey w3-xlarge w3-center"><span style="background-color:#444;">&nbsp; &#128073; &nbsp; Ziel und Inhalt &nbsp;</span></h2>
+    <div class="panel w3-margin">
+      <p class="w3-text-darkgrey w3-xlarge">NFC ist eine Technologie zur drahtlosen Datenkommunikation über sehr kurze Distanzen. Die Technologie ist bereits weit verbreitet, viele moderne Smartphones und Tablets unterstützen sie.</p>
+      <ul class="w3-text-darkgrey w3-xlarge">
+          <li>Wie funktioniert NFC?</li>
+          <li>NFC-Tags mit einem Smartphone oder Tablet lesen und schreiben</li>
+          <li>Was sind typische Anwendungen von NFC?</li>
+          <li>Wie unterscheidet sich NFC von RFID (Radio Frequency IDentification)?</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Kapitel -->
+<div class="w3-row-padding w3-padding-32 w3-container">
+    <div class="w3-content">
+        <h1 class="title">Wie funktioniert NFC?</h1>
+        <p class="w3-text-darkgrey w3-xlarge">NFC (Near Field Communication) ist eine Technologie für die drahtlose Datenkommunikation zwischen zwei Geräten über sehr kurze Distanzen (weniger als 10 cm, typisch bis 4 cm). Die Sende- und Empfangsfrequenz beträgt 13.56 MHz. Daten können mit maximal 424 Kilobit pro Sekunde übertragen werden (das entspricht etwa 30 Textseiten im Format A4 pro Sekunde).</p>
+        <p class="w3-center"><img src="img/nfcFunktionsweise.png" width="50%"></p>
+        <p class="w3-text-darkgrey w3-xlarge">Oft ist eines der beiden Geräte aktiv (z.B. ein Smartphone) und das andere passiv (z.B. ein "NFC-Tag" ohne Batterie). NFC unterstützt aber auch die Datenkommunikation zwischen zwei aktiven Geräten.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gRjWGOaIhKQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p class="w3-text-darkgrey w3-xlarge">Die Datenkommunikation erfolgt in einem der drei folgenden Modi:</p>
+        <ul class="w3-text-darkgrey w3-xlarge">
+          <li>reader/writer: Lesen von Daten aus einem passiven NFC-Tag bzw. Schreiben von Daten in einen passiven NFC-Tag</li>
+          <li>peer-to-peer: Datenaustausch zwischen zwei aktiven Geräten</li>
+          <li>card emulation: Ein aktives Gerät (z.B. ein Smartphone), das wie eine kontaktlose Debit-/Kreditkarte funktioniert</li>
+        </ul>
+        <h3 class="title">NFC-Tags</h3>
+        <p class="w3-text-darkgrey w3-xlarge">Passive NFC-Tags sind Datenspeicher, die beschrieben und gelesen werden können. Die Grösse und Einteilung des Speichers hängt vom Typ des NFC-Tags bzw. der Anwendung ab. Typisch sind Speichergrössen von weniger als 100 Bytes (Zeichen) bis mehrere Tausend Bytes. Ein NFC-Tag kann Inhalte in unterschiedlichen Formaten speichern (z.B. Text, eine Web-Adresse, eine Visitenkarte, usw.). Die Daten in einem NFC-Tag können aber auch Befehle zur Ausführung von Apps auf einem Smartphone oder Tablet sein (z.B. das automatische Einrichten eines WLAN-Zugangs).</p>
+        <p class="w3-text-darkgrey w3-xlarge">NFC-Tags gibt es in unterschiedlichsten Formen und Grössen (z.B. Anhänger, Stickers, usw.).</p>
+        <p class="w3-center"><img src="img/nfcTags.png" width="50%"></p>
+        <h1 class="title">NFC-Tags mit einem Smartphone oder Tablet lesen und schreiben</h1>
+        <div class="w3-panel w3-theme-l4">
+            <ul>
+              <li class="w3-text-darkgrey w3-xlarge">Sie finden am "Werkstattplatz" einige Tags und ein Android-Smartphone mit der App "NFCtools".</li>
+            </ul>
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-third">
+                    <img src="img/nfcHTWBibliothek_small.png" style="width: 100%">
+                </div>
+                <div class="w3-third">
+                    <img class="w3-round" src="img/nfcBibliothekskarte_small.jpg" style="width: 100%">
+                </div>
+                <div class="w3-third">
+                    <img src="img/nfcIEEEspectrum_small.jpg" style="width: 100%">
+                </div>
+            </div>
+            <ul>
+              <li class="w3-text-darkgrey w3-xlarge">Lesen Sie mit der App die Tags auf dem Blatt "Bibliothek HTW Chur" und auf der Bibliotheks-Idnetitätskarte.</li>
+            </ul>
+            <ul>
+              <li class="w3-text-darkgrey w3-xlarge">Schreiben Sie danach einen eigenen Text auf den NFC-Tag, der auf dem Magazin "IEEE Spectrum" angebracht ist und prüfen Sie, ob der Schreibvorgang erfolgreich war.</li>
+            </ul>
+            <ul>
+              <li class="w3-text-darkgrey w3-xlarge">Versuchen Sie schliesslich, mit dem auf der "Luxembourg Panorama City Map" angebrachten Tag die App "OsmAnd" zu öffnen.</li>
+            </ul>
+            <ul>
+            <li class="w3-text-darkgrey w3-xlarge">Notieren Sie im vorbereiteten Padlet (<a href="https://padlet.com/bruno_wenk/gtvi6lm4vorx" target="_blank">https://padlet.com/bruno_wenk/gtvi6lm4vorx</a>) Ihre Eindrücke und Fragen zu NFC.</li>
+            </ul>
+        </div>
+        <h1 class="title">Was sind typische Anwendungen von NFC?</h1>
+        <p class="w3-text-darkgrey w3-xlarge">Sehr aktuell ist das kontaktlose Bezahlen an der Kasse mit einer Debit-/Kreditkarte oder einem Smartphone mit einer entsprechenden App. Karten, mit denen man kontaktlos bezahlen kann, sind mit einem "wireless"-Symbol gekennzeichnet.</p>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="img/kontaktlosBezahlen.jpg" width="75%">
+            </div>
+            <div class="w3-half">
+                <img src="img/nfcCardEmulation.png" width="75%">
+            </div>
+        </div>
+        <p class="w3-text-darkgrey w3-xlarge">Praktisch sind NFC-Tags, in denen Befehle zur automatischen Ausführung von Apps auf einem mobilen Gerät gespeichert sind. Damit können beispielsweise Besucherinnen und Besucher einer öffentlichen Einrichtung (z.B. in einer Bibliothek) automatisch Zugang zu einem passwortgeschützten WLAN erhalten. Es können mit einem einzelnen NFC-Tag auch mehrere Befehle nacheinander ausgeführt werden (siehe beispielsweise <a href="https://mashtips.com/automate-android-phone-with-nfc-for-car-driving-mode/" target="_blank">Automate Android Phone with NFC for Car Driving Mode</a></p>
+        <p class="w3-text-darkgrey w3-xlarge">Vielfältig sind Anwendungen, bei denen NFC-Tags zur Identifikation von "Dingen" dienen. Beispielsweise können Objekte in Museen oder Archivalien in Archiven mit NFC-Tags, in denen die zugehörigen Metadaten gespeichert sind, gekenzeichnet werden.</p>
+        <div class="w3-row-padding w3-margin-top">
+            <div class="w3-twothird">
+                <p class="w3-text-darkgrey w3-xlarge">Es gibt auch schon verschiedene mit NFC ausgerüstete Geräte, die meist über eine entsprechende App bedient werden können (z.B. ein NFC-Vorhängeschloss).</p>
+            </div>
+            <div class="w3-third">
+                <p class="w3-center"><img src="img/nfcLock.png" width="50%"></p>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-margin-top">
+            <div class="w3-third">
+                <p class="w3-center"><img src="img/NFC_Implantat_Hand.png" width="50%"></p>
+            </div>
+            <div class="w3-twothird">
+                <p class="w3-text-darkgrey w3-xlarge">Ein Dauerthema sind NFC-Implantate (siehe z.B. <a href="https://iamrobot.de" target="_blank">https://iamrobot.de</a>). Mit implantierten NFC-Tags lassen sich Türen öffnen oder Eintrittskarten für eine Veranstaltung speichern.</p>
+            </div>
+        </div>
+        <h1 class="title">Wie unterscheidet sich NFC von RFID (Radio Frequency IDentification)?</h1>
+        <p class="w3-text-darkgrey w3-xlarge">Im Gegensatz zu NFC gibt es mehrere RFID-Standards. Sie unterscheiden sich im genutzten Frequenzbereich für die Datenübertragung (low frequency: 120-150 kHz / high frequency: 13.56 MHz / ultra high frequency: 433 MHz, 860-920 MHz), in der Lese-/Schreibdistanz (bis 20cm / bis 1m / bis 100m) und in der Fähigkeit, gleichzeitig mehrere Tags lesen zu können.</p>
+        <p class="w3-text-darkgrey w3-xlarge">Der RFID-Standard "ultra high frequency" ist mit dem NFC-Standard identisch; d.h. derartige RFID-Tags können mit einem Android-Smartphone gelesen und auch beschrieben werden, falls der RFID-Tag nicht schreibgeschützt ist!</p>
+        <p class="w3-text-darkgrey w3-xlarge"><a href="https://learn.sparkfun.com/tutorials/rfid-basics" target="_blank">(RFID-Tutorial)</a></p>
+    </div>  
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-black w3-center w3-opacity" style="font-family: 'Verdana', sans-serif;"> 
+  <p class="w3-small">Bruno Wenk, Juni 2018</p>
+  <p><img src="img/PublicDomain.svg"></p> 
+ <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// accordion
+function myAccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace("w3-theme-l2", "w3-theme-l4");
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace("w3-theme-l4", "w3-theme-l2");
+    }
+}
+</script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
+
